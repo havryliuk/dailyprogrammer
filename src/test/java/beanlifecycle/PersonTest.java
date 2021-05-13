@@ -1,14 +1,14 @@
-package beanLifecycle;
+package beanlifecycle;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PersonTest {
+class PersonTest {
 
     @Test
-    public void testPersonBean() {
+    void testPersonBean() {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PersonConfig.class);
         Person person = (Person) context.getBean("person");
         assertEquals("dummy person", person.getName());

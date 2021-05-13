@@ -1,3 +1,5 @@
+package other;
+
 class Balanced {
 
     boolean balanced(String input) {

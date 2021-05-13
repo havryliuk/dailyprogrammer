@@ -1,4 +1,4 @@
-package beanLifecycle;
+package beanlifecycle;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +8,7 @@ public class PersonConfig {
 
     @Bean
     public Person person() {
-        Person person = new Person();
+        var person = new Person();
         person.setName("dummy person");
         return person;
     }

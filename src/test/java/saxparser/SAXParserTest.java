@@ -1,16 +1,16 @@
 package saxparser;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import static junit.framework.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SAXParserTest {
+class SAXParserTest {
 
-    private static List<Plane> expected = new ArrayList<>();
+    private static final List<Plane> EXPECTED = new ArrayList<>();
 
     static {
         Plane plane1 = Plane.builder().year(1977).make("c").model("Skyhawk").colour("Light blue and white").description(
@@ -22,17 +22,17 @@ public class SAXParserTest {
                             .seller(new Seller("John Seller", "jseller@www.axl.com", "555-333-2222"))
                             .location(new Location("St. Joseph,", "Missouri")).build();
 
-        expected.add(plane1);
-        expected.add(plane2);
+        EXPECTED.add(plane1);
+        EXPECTED.add(plane2);
     }
 
     @Test
-    public void testSAXParser() {
+    void testSAXParser() {
         File file = new File("src/test/resources/saxparser/planes.xml");
 
         PlanesXMLParser parser = new PlanesXMLParser();
         List<Plane> planes = parser.getPlanes(file);
         assertEquals(2, planes.size());
-        assertEquals(expected, planes);
+        assertEquals(EXPECTED, planes);
     }
 }

@@ -1,4 +1,4 @@
-package beanLifecycle;
+package beanlifecycle;
 
 import lombok.Getter;
 import lombok.Setter;

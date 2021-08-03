@@ -26,7 +26,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - run: ls
     - run: cd python
-    - run: ls login/test
+    - run: ls python
     - run: pwd
     - name: Install dependencies
       run: |

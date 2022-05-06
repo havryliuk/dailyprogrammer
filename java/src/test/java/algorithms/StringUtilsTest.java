@@ -1,6 +1,7 @@
 package algorithms;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringUtilsTest {
 
     @Test
+    @Disabled("Gets out of memory with github actions")
     void testPerformanceOfLoopAndStreamMethods() {
         String s = RandomStringUtils.random(1_000_000_000, true, false).toUpperCase();
         long startLoop = System.currentTimeMillis();

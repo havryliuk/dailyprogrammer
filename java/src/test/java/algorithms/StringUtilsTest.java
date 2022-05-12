@@ -44,4 +44,10 @@ class StringUtilsTest {
         String s = "    ,Aaaaa,aBbbbbb ";
         assertEquals("aaaaaabbbbbb", StringUtils.normalize(s));
     }
+
+    @Test
+    void testCharacterHasEvenIndex() {
+        String s = "pasha";
+        assertTrue(StringUtils.hasEvenIndex(s, 's'));
+    }
 }

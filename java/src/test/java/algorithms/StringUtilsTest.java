@@ -50,4 +50,16 @@ class StringUtilsTest {
         String s = "pasha";
         assertTrue(StringUtils.hasEvenIndex(s, 's'));
     }
+
+    @Test
+    void testReverseString() {
+        String s = "pasha";
+        assertEquals("ahsap", StringUtils.reverse(s));
+    }
+
+    @Test
+    void testReverseWords() {
+        String s = "  The quick brown fox jumps over the lazy dog ";
+        assertEquals("ehT kciuq nworb xof spmuj revo eht yzal god", StringUtils.reverseWords(s));
+    }
 }

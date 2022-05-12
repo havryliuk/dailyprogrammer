@@ -22,5 +22,13 @@ public class StringUtils {
     static String normalize(String s) {
         return s.toLowerCase().replace(",", "").trim();
     }
-    
+
+    static boolean hasEvenIndex(String s, char a) {
+        if (s == null || s.isEmpty()) return false;
+
+        for (int i = 0; i < s.length() / 2 + 1; i = i + 2) {
+            if (s.charAt(i) == a) return true;
+        }
+        return false;
+    }
 }

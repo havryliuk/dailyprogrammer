@@ -48,7 +48,8 @@ class ArrayUtilsTest {
 
     @Test
     void reverseArray() {
-        ArrayUtils.reverse(ARRAY_B);
-        Assertions.assertArrayEquals(new int[] {7, 20, 40, -35, -8, -3, 0}, ARRAY_B);
+        final int[] ARRAY_C = Arrays.copyOf(ARRAY_B, ARRAY_B.length);
+        ArrayUtils.reverse(ARRAY_C);
+        Assertions.assertArrayEquals(new int[] {7, 20, 40, -35, -8, -3, 0}, ARRAY_C);
     }
 }

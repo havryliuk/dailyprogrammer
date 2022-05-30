@@ -48,8 +48,15 @@ class ArrayUtilsTest {
 
     @Test
     void reverseArray() {
-        final int[] ARRAY_C = Arrays.copyOf(ARRAY_B, ARRAY_B.length);
-        ArrayUtils.reverse(ARRAY_C);
-        Assertions.assertArrayEquals(new int[] {7, 20, 40, -35, -8, -3, 0}, ARRAY_C);
+        final int[] arrayC = Arrays.copyOf(ARRAY_B, ARRAY_B.length);
+        ArrayUtils.reverse(arrayC);
+        Assertions.assertArrayEquals(new int[] {7, 20, 40, -35, -8, -3, 0}, arrayC);
+    }
+
+    @Test
+    void rotateArrayTest() {
+        final int[] arrayToRotate = Arrays.copyOf(SORTED_ARRAY, SORTED_ARRAY.length);
+        ArrayUtils.rotateLeft(arrayToRotate);
+        Assertions.assertArrayEquals(new int[] {3, 15, 22, 35, 41, 55, 69, 74, 84, 90, 500, 1}, arrayToRotate);
     }
 }

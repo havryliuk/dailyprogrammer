@@ -1,11 +1,8 @@
 package algorithms;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.OptionalInt;
 import java.util.function.IntPredicate;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ArrayUtils {
@@ -44,5 +41,14 @@ public class ArrayUtils {
             array[i] = array[secondIndex];
             array[secondIndex] = temp;
         }
+    }
+
+    public static void rotateLeft(int[] array) {
+        int firstItem = array[0];
+        for (int i = 0; i < array.length - 1; i++) {
+            array[i] = array[i+1];
+        }
+        // or System.arraycopy(array, 1, array, 0, array.length - 1);
+        array[array.length - 1] = firstItem;
     }
 }

@@ -2,6 +2,7 @@ package algorithms;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Enumeration;
 import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,5 +21,10 @@ public class StackTest {
         stack.pop();
         stack.peek();
         assertEquals(1, stack.size());
+
+        Enumeration<String> e = stack.elements();
+        while (e.hasMoreElements()) {
+            System.out.println(e.nextElement());
+        }
     }
 }

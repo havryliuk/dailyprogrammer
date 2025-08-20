@@ -8,3 +8,7 @@ Parameters:
 arg1: first argument
 arg2: second argument. Defaults to None.
 """ == result
+
+def test_name():
+    result = my_function.__name__
+    assert "my_function" == result

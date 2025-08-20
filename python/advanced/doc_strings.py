@@ -5,4 +5,4 @@ def my_function(arg1, arg2=None):
     arg1: first argument
     arg2: second argument. Defaults to None.
     """
-    print(arg1, arg2)
+    print(arg1, arg2, sep="\n")

@@ -1,0 +1,14 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ '**' ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  maven-build:
+    uses: ./.github/workflows/maven-build.yml
+
+  python-build:
+    uses: ./.github/workflows/python-build.yml
